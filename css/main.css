@@ -17,8 +17,8 @@
 
   --border-radius-sm: 15px;
   --border-radius-lg: 30px;
-  --box-shadow-color: rgb(0, 0, 0/3%);
-  --box-shadow-color-strong: rgb(0, 0, 0/ 41%);
+  --box-shadow-color: rgb(0 0 0/3%);
+  --box-shadow-color-strong: rgb(0 0 0/ 41%);
 }
 #root.night-mode {
   --bg-white: #222;
@@ -26,7 +26,7 @@
   --text-grey: #0b0d0e;
   --border-color: rgba(255, 255, 255, 0.2);
   --border-color-light: rgba(255, 255, 255, 0.2);
-  --shadow-color: rgb(23 19 19);
+  --box-shadow-color: rgb(23 19 19);
   --box-shadow-color-strong: rgb(13 7 7);
 }
 .font--volkhov {
@@ -42,6 +42,7 @@
   background-color: var(--bg-orange);
   border-radius: 30px;
   font-size: 1rem;
+  font-weight: 600;
   line-height: 1.625rem;
   transition: 0.5s ease-in-out;
   font-family: "Source Sans Pro", sans-serif;
@@ -197,14 +198,14 @@ header.scrolling .header__brand--dropdown .dropdown-toggle i {
 
   z-index: 1;
 }
-.content__sub-heading {
+.carousel-content__sub-heading {
   font-size: 5rem;
   color: var(--text-grey);
   margin-left: -40px;
   position: absolute;
   z-index: 0;
 }
-.content__heading {
+.carousel-content__heading {
   padding-top: 60px;
   font-size: 2rem;
   font-weight: 800;
@@ -212,12 +213,13 @@ header.scrolling .header__brand--dropdown .dropdown-toggle i {
   z-index: 1;
   position: relative;
 }
-.content__des {
+.carousel-content__des {
   font-size: 1.063rem;
   color: var(--text-thin);
 }
 .project__carousel--slider {
-  padding: 0;
+  margin-right: -15px;
+  margin-left: -15px;
   border-bottom-left-radius: 30px;
   overflow: hidden;
 }
@@ -253,4 +255,65 @@ header.scrolling .header__brand--dropdown .dropdown-toggle i {
   font-size: 1.063rem;
   color: var(--text-white);
 }
+
+.project__carousel--content.content-inside {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-white);
+  left: 0;
+  right: 0;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 48px 32px 32px 64px;
+  border-radius: 8px;
+}
 /* --- end Carousel --- */
+
+/* --- start Content Title general --- */
+.content__title h5 {
+  color: var(--text-orange);
+  font-size: 1.25rem;
+}
+.content__title h3 {
+  color: var(--text-heading);
+  line-height: 2.813rem;
+  font-size: 2.188rem;
+  font-weight: 600;
+}
+.content__title p {
+  color: var(--text-thin);
+  font-size: 1.063rem;
+}
+/* --- end Content Title general --- */
+
+/* --- start Work --- */
+.project__work {
+  background-color: var(--bg-white);
+}
+.project__work--list {
+}
+.project__work--item {
+  padding: 40px 30px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 1rem 3rem var(--box-shadow-color);
+  cursor: pointer;
+}
+.project__work--item:hover {
+  box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
+}
+.project__work--img {
+  max-width: 65px;
+}
+.project__work--link {
+  margin-top: 25px;
+  font-size: 1.25rem;
+  color: var(--text-heading);
+  margin-top: 25px;
+  font-weight: 600;
+  display: block;
+}
+.project__work--link:hover {
+  color: var(--text-green);
+}
+/* --- end Work --- */
