@@ -453,3 +453,218 @@ header.scrolling .header__brand--dropdown .dropdown-toggle i {
   line-height: 26px;
 }
 /* --- end Summary --- */
+
+/* --- start Gallery ---- */
+.project__gallery {
+  background-color: var(--bg-white);
+}
+.project__gallery--title {
+}
+.project__gallery--title h5 {
+  font-size: 1.375rem;
+  color: var(--text-orange);
+}
+.project__gallery--title h3 {
+  font-size: 2.5rem;
+  color: var(--text-heading);
+  font-weight: 600;
+  line-height: 50px;
+}
+.project__gallery--title p {
+  color: var(--text-thin);
+  font-size: 1.063rem;
+  line-height: 26px;
+}
+.project__gallery--item {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project__gallery--caption {
+  margin: 20px;
+  padding: 6px;
+  background-color: rgb(255 255 255/ 27%);
+  color: var(--text-white);
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.project__gallery--item figure::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -50%;
+  z-index: 1;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  opacity: 0;
+  transition: left 0.3s linear;
+  transform: skewX(-17deg);
+}
+.project__gallery--item:hover figure::after {
+  left: 100%;
+  opacity: 1;
+}
+/* --- end Gallery ---- */
+
+/* --- start Testimonial --- */
+.project__testimonial {
+  background: url(../imgs/bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.project__testimonial::after {
+  content: "";
+  display: block;
+  background: rgb(10 10 10/52%);
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.project__testimonial .carousel {
+  position: relative;
+  z-index: 1;
+}
+.project__testimonial--img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.project__testimonial--guest {
+  color: var(--text-white);
+  margin: 10px 0 5px 0;
+  font-size: 1.25rem;
+}
+.project__testimonial--customer {
+  font-size: 1rem;
+  color: var(--text-white);
+}
+.project__testimonial--comment {
+  font-size: 1.375rem;
+  line-height: 34px;
+  color: var(--text-white);
+}
+.project__testimonial--icon {
+  color: var(--text-orange);
+  font-size: 1.25rem;
+}
+.project__testimonial .carousel-indicators {
+  position: absolute;
+  bottom: -10px;
+}
+.project__testimonial .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 1px 6px;
+}
+.project__testimonial .carousel-indicators li:hover {
+  background-color: var(--bg-orange);
+}
+.project__testimonial .carousel-indicators li.active {
+  background-color: var(--bg-orange);
+}
+/* --- end Testimonial ---- */
+
+/* --- start Footer --- */
+footer {
+  background-color: var(--bg-white);
+}
+.footer__heading {
+  color: var(--text-heading);
+  font-size: 1rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.footer__content {
+  font-size: 1.063rem;
+  color: var(--text-thin);
+}
+.footer__content span {
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+}
+.footer__content span:hover {
+  color: var(--text-orange);
+}
+.footer__logo {
+  font-size: 2rem;
+  color: var(--text-orange);
+  cursor: pointer;
+}
+.footer__logo:hover {
+  color: var(--text-heading);
+}
+.footer__w3 {
+  color: var(--text-green);
+}
+.footer__input input {
+  outline: none;
+  background-color: var(--bg-grey);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  font-size: 1rem;
+  padding: 12px 20px;
+  height: 48px;
+  width: 70%;
+}
+.footer__input input:focus {
+  box-shadow: none;
+  border: 1px solid var(--border-color-light);
+}
+.footer__input button {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--bg-green);
+  padding: 12px;
+  height: 48px;
+  width: 80%;
+}
+.footer__input button:hover {
+  opacity: 0.8;
+}
+.night-mode .footer__input button:hover {
+  opacity: 1;
+}
+.footer__input .input-group-append {
+  width: 30%;
+}
+.footer__input button i {
+  color: var(--text-white);
+}
+.footer__social {
+}
+.footer__social--item {
+  margin-right: 5px;
+}
+.footer__social--link {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: var(--text-green);
+  background-color: rgb(10 191 83/ 8%);
+  display: block;
+  text-align: center;
+  transition: all 0.3s linear;
+  line-height: 35px;
+}
+
+.footer__social--link:hover {
+  color: var(--text-orange);
+  background-color: rgb(255 201 61/ 19%);
+  box-shadow: 0px 4px 7px 0px rgb(10 10 10 / 24%);
+}
+/* --- end Footer --- */
