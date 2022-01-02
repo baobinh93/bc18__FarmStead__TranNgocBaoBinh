@@ -24,6 +24,7 @@
   --bg-white: #222;
   --text-heading: #ffffff;
   --text-grey: #0b0d0e;
+  --text-thin: #b7b7b7;
   --border-color: rgba(255, 255, 255, 0.2);
   --border-color-light: rgba(255, 255, 255, 0.2);
   --box-shadow-color: rgb(23 19 19);
@@ -284,6 +285,7 @@ header.scrolling .header__brand--dropdown .dropdown-toggle i {
 .content__title p {
   color: var(--text-thin);
   font-size: 1.063rem;
+  font-weight: 300;
 }
 /* --- end Content Title general --- */
 
@@ -317,3 +319,137 @@ header.scrolling .header__brand--dropdown .dropdown-toggle i {
   color: var(--text-green);
 }
 /* --- end Work --- */
+
+/* --- start Service ---- */
+.project__service {
+  background-color: var(--bg-green);
+}
+
+.project__service .content__title--bg {
+  color: var(--text-white);
+  opacity: 0.14;
+  z-index: 0;
+  font-size: 12vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.project__service--card {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: none;
+}
+.project__service--card .card-body {
+  padding: 30px 20px;
+  background-color: var(--bg-white);
+}
+.project__service--tag {
+  display: inline-block;
+  color: var(--bg-green);
+  background-color: rgb(0 157 77/16%);
+  padding: 5px 20px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+.project__service--link {
+  color: var(--text-heading);
+  font-weight: 600;
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+.project__service--link:hover {
+  color: var(--text-green);
+}
+.project__service--des {
+  font-size: 1.063rem;
+  color: var(--text-thin);
+}
+/* --- end Service ---- */
+
+/* ---- start Experience --- */
+.project__experience {
+  background-color: var(--bg-white);
+}
+.project__experience--icon {
+  color: var(--text-orange);
+  font-size: 1.875rem;
+}
+.project__experience--info {
+}
+.project__experience--name {
+  color: var(--text-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.project__experience--des {
+  font-size: 1.063rem;
+  color: var(--text-thin);
+}
+.project__experience--img {
+  border-radius: var(--border-radius-lg);
+}
+.project__experience--img-tag {
+  bottom: 38px;
+  left: -85px;
+  padding: 40px;
+  background-color: var(--bg-orange);
+  min-width: 300px;
+  box-shadow: 30px 30px 30px rgb(0 0 0 / 20%);
+  border-bottom-right-radius: 100px;
+}
+.project__experience--img-tag h1 {
+  color: var(--text-white);
+  font-size: 4.375rem;
+  line-height: 80px;
+  font-weight: 900;
+}
+.project__experience--img-tag p {
+  color: var(--text-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+/* ---- end Experience --- */
+
+/* --- start Summary --- */
+.project__summary {
+  background-color: var(--bg-white);
+}
+.project__summary--list {
+}
+.project__summary--item {
+  margin-top: 30px;
+  padding: 24px 8px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+.project__summary--item.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.project__summary--item:hover {
+  border: 1px solid var(--border-color-light);
+}
+
+.project__summary--img {
+}
+.project__summary--name {
+  font-size: 1.188rem;
+  line-height: 25px;
+  color: var(--text-heading);
+  font-weight: 700;
+  transition: color 0.3s ease-in;
+}
+.project__summary--item:hover .project__summary--name {
+  color: var(--text-green);
+}
+.project__summary--des {
+  margin-top: 10px;
+  color: var(--text-thin);
+  font-size: 1.063rem;
+  line-height: 26px;
+}
+/* --- end Summary --- */
