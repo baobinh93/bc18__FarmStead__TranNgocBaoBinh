@@ -51,6 +51,9 @@
 .project__button:hover {
   background-color: var(--bg-green);
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: silver;
   height: 2000px;
@@ -134,22 +137,35 @@ header .navbar {
     transform: scaleY(1);
   }
 }
-.header__search--btn {
-  width: 35px;
-  height: 35px;
-  background-color: var(--bg-white);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.header__search--input {
+  width: 38px;
+  border-radius: 20px;
+  overflow: hidden;
   margin-right: 10px;
+  position: relative;
   cursor: pointer;
-  color: var(--text-heading);
-  border: 1px solid var(--border-color-light);
+  transition: width 0.5s linear;
+  transform-origin: 100% 50%;
 }
-.header__search--btn i {
-  color: inherit;
-  font-size: 1rem;
+.header__search--input.show {
+  width: 200px;
+}
+.header__search--input label.input-group-text {
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+.header__search--input input {
+  border: none;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 15px;
+}
+.header__search--input input:focus {
+  outline: none;
+  box-shadow: none;
 }
 .header__mode--btn {
   border: none;
@@ -668,3 +684,27 @@ footer {
   box-shadow: 0px 4px 7px 0px rgb(10 10 10 / 24%);
 }
 /* --- end Footer --- */
+
+/* --- start Scroll to top  --- */
+.scroll-to-top {
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  font-size: 1rem;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--bg-green);
+  text-align: center;
+  line-height: 40px;
+  z-index: 999;
+  transition: opacity 0.2s linear;
+}
+.scroll-to-top:hover {
+  opacity: 0.8;
+}
+.scroll-to-top:hover a {
+  color: #fff;
+}
+/* --- end Scroll to top  --- */

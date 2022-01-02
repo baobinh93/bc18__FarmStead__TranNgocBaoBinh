@@ -50,9 +50,13 @@
               Farmstead
             </a>
         
-            <label for="searchTyping" class="  header__search--btn my-2 ml-auto " >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
+           
+            <div class="input-group flex-nowrap ml-auto header__search--input">
+              <label for="searchInput" class="input-group-text" id="addon-wrapping">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </label>
+              <input id="searchInput" type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
             <button
             class="header__mode--btn  mr-3 "
             type="button"
@@ -77,7 +81,7 @@
             </div>
         </div>
       </header>
-      <section class="project__carousel container-fluid">
+      <section class="project__carousel container-fluid" id="#top">
         <div class="row align-items-center">
           <div class="col-md-5 d-md-block d-none">
             <div class="project__carousel--content font--volkhov">
@@ -147,13 +151,13 @@
             </div>
             <div class=" d-md-none d-block">
               <div class="project__carousel--content content-inside font--volkhov">
-                <h2 class="content__sub-heading">
+                <h2 class="carousel-content__sub-heading">
                   Farm
                 </h2>
-                <h3 class="content__heading mb-sm-4 mb-2">
+                <h3 class="carousel-content__heading mb-sm-4 mb-2">
                   Welcome to Farmstead where Natural Food is born!
                 </h3>
-                <p class="content__des font--source">
+                <p class="carousel-content__des font--source">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
                 </p>
                 <button class="project__button mt-sm-5 mt-4">
@@ -666,7 +670,7 @@
         <div class="py-5">
           <div class="container py-4">
             <div class="row font--source">
-              <div class="col-lg-4  mt-5 mt-lg-0">
+              <div class="col-lg-4 ">
                 <h3 class="footer__heading font--volkhov">
                   FIND US
                 </h3>
@@ -684,7 +688,7 @@
                 </p>
               </div>
 
-              <div class="col-lg-4 pl-lg-5 order-lg-1 order-3">
+              <div class="col-lg-4 pl-lg-5 order-lg-1 order-3  mt-5 mt-lg-0">
                 <a class="footer__logo font--volkhov position-relative">
                   <i class="header__brand--icon fa-solid fa-leaf"></i>
                   Farmstead
@@ -745,6 +749,12 @@
           </div>
         </div>  
       </footer>
+      <section class="scroll-to-top" id="scrollTopBtn">
+        <a href="#top" class="stretched-link">
+          <i class="fa-solid fa-turn-up"></i>
+        </a>
+      </section>
+
     </div>
 
    
@@ -764,16 +774,42 @@
               headerEl.classList.remove('scrolling')  
             }
          }
+
+         const headerSearchEl = document.querySelector(".header__search--input");
+         const headerSearchInputEl =  document.querySelector('#searchInput');
+         headerSearchInputEl.onfocus = function(){
+          headerSearchEl.classList.add('show');
+         };
+         headerSearchInputEl.onblur =  function(){
+          headerSearchEl.classList.remove('show');
+         };
     </script>
 
     <!-- --- night mode --- -->
     <script>
       const nightModeBtnEl = document.querySelector('.header__mode--btn');
       const rootEl = document.querySelector('#root');
+      const nightModeIconMoonEls = document.querySelectorAll('.fa-regular.fa-moon');
+      const nightModeIconSunEls =  document.querySelectorAll('.far.fa-sun');
 
       nightModeBtnEl.onclick = function(){
         rootEl.classList.toggle('night-mode');
+        nightModeIconMoonEls.forEach( element => element.classList.toggle('d-none'));
+        nightModeIconSunEls.forEach( element => element.classList.toggle('d-none'));
       }
+    </script>
+
+      <!-- ---- start Scroll to Top Btn  ----  -->  
+      <script>
+        const mybutton = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll' , openBtnToTop);
+        function openBtnToTop() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
     </script>
   </body>
 </html>
