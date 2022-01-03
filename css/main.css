@@ -147,6 +147,7 @@ header .navbar {
   cursor: pointer;
   transition: width 0.5s linear;
   transform-origin: 100% 50%;
+  border: 1px solid var(--border-color-light);
 }
 .header__search--input.show {
   width: 200px;
@@ -708,3 +709,17 @@ footer {
   color: #fff;
 }
 /* --- end Scroll to top  --- */
+
+@media (max-width: 769px) {
+  .project__experience--img-tag {
+    left: -60px;
+    padding: 20px;
+    border-bottom-right-radius: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .project__experience--img-tag {
+    left: -20px;
+    padding: 10px;
+  }
+}
